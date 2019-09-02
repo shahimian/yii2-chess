@@ -38,6 +38,17 @@ class CInterface extends BaseObject
             'row'=>$row,
             'column'=>$col,
         ];
-    }
+	}
+	
+	function convert($cell)
+	{
+		$row = $cell['row'];
+		$row = 7 - $row;
+		$column = $cell['column'];
+		return [
+			'x' => $row*60+0,
+			'y' => $column*60+0,
+		];
+	}
 
 }
