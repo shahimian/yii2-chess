@@ -76,4 +76,28 @@ class CInterface extends BaseObject
 		] : $cell);
 	}
 
+	static function map_str_num($pos)
+	{
+		$valid_row = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+		if($pos[1] > 8 || $pos[1] < 1 || !in_array($pos[0], $valid_row))
+			return false;
+		$row = $pos[1] - 1;
+		$column = 0;
+		switch($pos[0])
+		{
+			case 'a': $column = 0; break;
+			case 'b': $column = 1; break;
+			case 'c': $column = 2; break;
+			case 'd': $column = 3; break;
+			case 'e': $column = 4; break;
+			case 'f': $column = 5; break;
+			case 'g': $column = 6; break;
+			case 'h': $column = 7;
+		}
+		return [
+			'row' => $row,
+			'column' => $column
+		];
+	}
+
 }

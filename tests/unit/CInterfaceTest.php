@@ -95,4 +95,43 @@ class CInterfaceTest extends \Codeception\Test\Unit
         ];
     }
 
+    /**
+     * @dataProvider additionErrorProviderMapStringNumber
+     */
+    public function testErrorMapStringNumber($position){
+        $map = $this->tester->map_str_num($position);
+        $this->assertFalse($map);
+    }
+
+    public function additionErrorProviderMapStringNumber(){
+        return [
+            ['a9'],
+            ['z0'],
+            ['z3'],
+            ['h9'],
+            ['y1'],
+        ];
+    }
+
+    /**
+     * @dataProvider additionProviderMapStringNumber
+     */
+    public function testMapStringNumber($position, $expectedRow, $expectedColumn){
+        $map = $this->tester->map_str_num($position);
+        $this->assertEquals([
+            'row' => $expectedRow, 
+            'column' => $expectedColumn,
+        ], $map);
+    }
+
+    public function additionProviderMapStringNumber(){
+        return [
+            ['a3', 2, 0],
+            ['f4', 3, 5],
+            ['a8', 7, 0],
+            ['a1', 0, 0],
+            ['h8', 7, 7],
+        ];
+    }
+
 }
