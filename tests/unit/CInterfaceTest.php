@@ -13,17 +13,31 @@ class CInterfaceTest extends \Codeception\Test\Unit
     
     protected function _before()
     {
+        $this->tester = \Yii::createObject([
+            'class' => CInterface::className(),
+        ]);
     }
 
     protected function _after()
     {
     }
 
-    public function testSomeFeature()
+    /**
+     * @dataProvider additionProvider
+     */
+    public function testCell($x, $y, $rate, $expected)
     {
-        $this->tester = \Yii::createObject([
-            'class' => CInterface::className(),
-        ]);
-        $this->assertTrue($this->tester->cell());
+        $cell = $this->tester->cell($x, $y, $rate);
+        $this->assertEquals($expected, $cell);
     }
+
+    public function additionProvider(){
+        return [
+            [23, 447, 1, ['row' => 0, 'column' => 0]],
+            [450, 210, 1, ['row' => 4, 'column' => 7]],
+            [200, 154, 1, ['row' => 5, 'column' => 3]],
+            [425, 55, 1, ['row' => 7, 'column' => 7]],
+        ];
+    }
+
 }
