@@ -1,0 +1,22 @@
+{
+    "name": "shahimian/yii2-chess",
+    "description": "Todo",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammadali Shahimian",
+            "email": "shahimian@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "shahimian\\chess\\": ""
+        }
+    }
+}
