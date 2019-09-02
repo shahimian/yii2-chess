@@ -40,7 +40,7 @@ class CInterface extends BaseObject
         ];
 	}
 	
-	function convert($cell)
+	public function convert($cell)
 	{
 		$row = $cell['row'];
 		$row = 7 - $row;
@@ -51,7 +51,7 @@ class CInterface extends BaseObject
 		];
 	}
 
-	function determine_class($man, $q)
+	public function determine_class($man, $q)
 	{
 		$color = $q > 0 ? 'white' : 'black';
 		switch($man)
@@ -66,6 +66,14 @@ class CInterface extends BaseObject
 		if(isset($name))
 		  return $color . '-' . $name;
 		return false;
+	}
+
+	public function map_convert($cell, $color)
+	{
+		return ( $color == -1 ? [
+			"row" => 7 - $cell["row"],
+			"column" => 7 - $cell["column"]
+		] : $cell);
 	}
 
 }

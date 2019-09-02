@@ -61,15 +61,37 @@ class CInterfaceTest extends \Codeception\Test\Unit
      */
     public function testDetermineClass($man, $q, $expected){
         $dc = $this->tester->determine_class($man, $q);
-
+        $this->assertEquals($expected, $dc);
     }
 
     public function additionProviderDetermineClass(){
         return [
             ['a', 1, false],
             ['p', 1, 'white-pawn'],
-            ['t', 0, 'black-rook'],
-            ['c', 0, 'black-knight'],
+            ['t', -1, 'black-rook'],
+            ['c', -1, 'black-knight'],
+        ];
+    }
+
+    /**
+     * @dataProvider additionProviderMapConvert
+     */
+    public function testMapConvert($row, $column, $color, $expectedRow, $expectedColumn){
+        $mc = $this->tester->map_convert([
+            'row' => $row,
+            'column' => $column,
+        ], $color);
+        $this->assertEquals([
+            'row' => $expectedRow,
+            'column' => $expectedColumn,
+        ], $mc);
+    }
+
+    public function additionProviderMapConvert(){
+        return [
+            [0, 0, -1, 7, 7],
+            [5, 3, 1, 5, 3],
+            [3, 3, -1, 4, 4],
         ];
     }
 
