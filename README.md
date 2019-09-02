@@ -44,7 +44,7 @@ Testing
 -------
 For test this extension use these commands:
 ```bash
-> java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone-*.jar  -browserSideLog -debug -timeout 60
+> java -jar selenium-server-standalone-*.jar -Dwebdriver.chrome.driver=chromedriver -port 4444
 
 > chromedriver
 ```

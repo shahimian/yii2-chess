@@ -9,5 +9,8 @@ modules:
     enabled:
         - WebDriver:
             browser: chrome
-            url: http://localhost/basic/web
-        - \Helper\Acceptance
+            url: 127.0.0.1:8080/
+        - Yii2:
+            part: orm
+            entryScript: index-test.php
+            cleanup: false

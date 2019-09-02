@@ -1,12 +1,12 @@
 <?php
 
-use shahimian\chess\Chess;
+use yii\helpers\Url;
 
 class ChessCest
 {
     public function _before(AcceptanceTester $I)
     {
-        $I->amOnPage(['chess/default/index']);
+        $I->amOnPage(Url::toRoute('chess'));
     }
 
     public function _after(AcceptanceTester $I)
