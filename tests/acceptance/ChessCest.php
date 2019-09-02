@@ -6,7 +6,7 @@ class ChessCest
 {
     public function _before(AcceptanceTester $I)
     {
-        $I->amOnPage(['/chess/default/index']);
+        $I->amOnPage(['chess/default/index']);
     }
 
     public function _after(AcceptanceTester $I)

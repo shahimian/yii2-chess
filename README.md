@@ -40,3 +40,12 @@ Maybe you would want to module this extension then use it in your config Yii2:
     ],
 ],
 ```
+Testing
+-------
+For test this extension use these commands:
+```bash
+> java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone-*.jar  -browserSideLog -debug -timeout 60
+
+> chromedriver
+```
+and then `codecept run`
