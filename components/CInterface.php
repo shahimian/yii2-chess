@@ -51,4 +51,21 @@ class CInterface extends BaseObject
 		];
 	}
 
+	function determine_class($man, $q)
+	{
+		$color = $q > 0 ? 'white' : 'black';
+		switch($man)
+		{
+		  case $man == 'p': $name = 'pawn'; break;
+		  case $man == 't': $name = 'rook'; break;
+		  case $man == 'c': $name = 'knight'; break;
+		  case $man == 'd': $name = 'queen'; break;
+		  case $man == 'f': $name = 'bishop'; break;
+		  case $man == 'r': $name = 'king';
+		}
+		if(isset($name))
+		  return $color . '-' . $name;
+		return false;
+	}
+
 }

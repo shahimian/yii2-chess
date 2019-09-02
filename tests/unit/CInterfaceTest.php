@@ -56,4 +56,21 @@ class CInterfaceTest extends \Codeception\Test\Unit
         ];
     }
 
+    /**
+     * @dataProvider additionProviderDetermineClass
+     */
+    public function testDetermineClass($man, $q, $expected){
+        $dc = $this->tester->determine_class($man, $q);
+
+    }
+
+    public function additionProviderDetermineClass(){
+        return [
+            ['a', 1, false],
+            ['p', 1, 'white-pawn'],
+            ['t', 0, 'black-rook'],
+            ['c', 0, 'black-knight'],
+        ];
+    }
+
 }
