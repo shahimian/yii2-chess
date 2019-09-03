@@ -100,4 +100,32 @@ class CInterface extends BaseObject
 		];
 	}
 
+	public function status($board,$status,$q,$man_to,$color)
+	{
+		$pos = [];
+		$i = 1;
+		while($i <= 2)
+		{
+		  if($i == 2 && strcmp($status['man']['pos2'],'T'))
+			return $pos;
+		  $man = strtolower($status['man']['pos' . $i]);
+		  $man_to = strtolower($man_to);
+		  $man_id = abs($board[$status['from']['pos' . $i]['row']][$status['from']['pos' . $i]['column']]);
+		  $which = ($q==1)?'w':'b';
+		  $id_to = abs($board[$status['to']['pos' . $i]['row']][$status['to']['pos' . $i]['column']]);
+
+		  if($id_to == 0 && !strcmp($status['status'],'x'))//e.p.
+			$id_to = $board[$status['to']['pos' . $i]['row']-$q][$status['to']['pos' . $i]['column']];
+
+		  $which_opp = ($q==-1)?'w':'b';
+		  $to = $this->convert($this->map_convert($status['to']['pos' . $i],$color));
+		  $str = "#$which$man-$man_id,$to[x],$to[y],$status[status]";
+		  if($id_to != 0)
+			  $str .= ",#$which_opp$man_to-$id_to";
+		  array_push($pos, $str);
+		  $i += 1;
+		}
+		return $pos;
+	}
+
 }

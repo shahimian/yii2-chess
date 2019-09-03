@@ -12,39 +12,39 @@ class ChessBoard extends BaseObject
   public function __construct($config = [])
   {
     parent::__construct($config);
-    $this->board = array(
-        array_fill(0,8,0),
-        array_fill(0,8,0),
-        array_fill(0,8,0),
-        array_fill(0,8,0),
-        array_fill(0,8,0),
-        array_fill(0,8,0),
-        array_fill(0,8,0),
-        array_fill(0,8,0),
-        'flag'=>array(
-            'start_pawn'=>array(
-                'white'=>array_fill(1,8,true),
-                'black'=>array_fill(1,8,true),
-            ),
-            'ep'=>array(
-                'white'=>array_fill(1,8,false),
-                'black'=>array_fill(1,8,false),
-            ),
-            'go_rook'=>array(
-                'white'=>array(19=>true,9=>true,20=>true),
-                'black'=>array(19=>true,9=>true,20=>true),
-            ),
-        ),
-        'pos'=>'',
-        'change'=>'',
-        'players_change'=>'',
-		'fifty_moves'=>0,
-        'out'=>'',
-		'timer'=>array(
-			'player1'=>$this->timer,
-			'player2'=>$this->timer,
-		),
-    );
+    $this->board = [
+      array_fill(0,8,0),
+      array_fill(0,8,0),
+      array_fill(0,8,0),
+      array_fill(0,8,0),
+      array_fill(0,8,0),
+      array_fill(0,8,0),
+      array_fill(0,8,0),
+      array_fill(0,8,0),
+      'flag' => [
+        'start_pawn' => [
+          'white' => array_fill(1,8,true),
+          'black' => array_fill(1,8,true),
+        ],
+        'ep' => [
+          'white' => array_fill(1,8,false),
+          'black' => array_fill(1,8,false),
+        ],
+        'go_rook' => [
+          'white' => array(19=>true,9=>true,20=>true),
+          'black' => array(19=>true,9=>true,20=>true),
+        ],
+      ],
+      'pos' => '',
+      'change' => '',
+      'players_change' => '',
+  		'fifty_moves' => 0,
+      'out' => '',
+      'timer' => [
+        'player1' => $this->timer,
+        'player2' => $this->timer,
+      ],
+    ];
 
     for($i=1; $i<=8; $i++)      // pawn
     {
