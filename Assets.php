@@ -12,4 +12,8 @@ class Assets extends AssetBundle {
         'styles.css',
     ];
 
+    public $js = [
+        'main.js',
+    ];
+
 }
