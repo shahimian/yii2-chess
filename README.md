@@ -44,10 +44,9 @@ Testing
 -------
 For test this extension use these commands:
 ```bash
-> java -jar selenium-server-standalone-*.jar -Dwebdriver.chrome.driver=chromedriver -port 4444
-
+> java -jar selenium-server-standalone-*.jar -Dwebdriver.chrome.driver=chromedriver
 > chromedriver
 ```
-and then `codecept run`
+and then `codecept run`. Pay attention to **run server** firstly, so you can create new terminal for each line in upper commands.
 
 *Notice* Make sure to set config Yii2 at `codeception.yml` in root folder and set your url that you test to be exact. For this purpose, modify `acceptance.suite.yml` in test folder.
