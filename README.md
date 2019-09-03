@@ -1,6 +1,6 @@
 Chess
 =====
-Todo
+![Chess](https://github.com/shahimian/yii2-chess/tree/master/assets/intro.png)
 
 Installation
 ------------
@@ -50,3 +50,4 @@ For test this extension use these commands:
 and then `codecept run`. Pay attention to **run server** firstly, so you can create new terminal for each line in upper commands.
 
 *Notice* Make sure to set config Yii2 at `codeception.yml` in root folder and set your url that you test accurately. For this purpose, modify `acceptance.suite.yml` in test folder.
+:heart:
