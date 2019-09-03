@@ -1,6 +1,6 @@
 Chess
 =====
-![Chess](https://github.com/shahimian/yii2-chess/tree/master/assets/intro.png)
+![Chess](https://photos.app.goo.gl/6uKNANSqZBZfBE6Q6)
 
 Installation
 ------------
