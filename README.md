@@ -1,6 +1,6 @@
 Chess
 =====
-![Chess](https://photos.app.goo.gl/6uKNANSqZBZfBE6Q6)
+![Chess](https://photos.app.goo.gl/TMZZc4eNbFqNy1Gc6)
 
 Installation
 ------------
