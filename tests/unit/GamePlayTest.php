@@ -22,6 +22,7 @@ class GamePlayTest extends \Codeception\Test\Unit
 
     public function testPropertiesGamePlay()
     {
+        $this->assertEquals(19, $this->tester->board[0][0]); // there is a rook oerthere if it is :)
         $this->assertEquals('b1', $this->tester->from);
         $this->assertEquals('b3', $this->tester->to);
     }
