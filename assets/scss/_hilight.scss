@@ -1,0 +1,16 @@
+div.hilight, div.hilight-move, div.hilight-check {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    z-index: 0;
+}
+
+div.hilight-move {
+    background: rgba(255, 180, 0, 0.43);
+    border: inset rgba(97, 33, 8, 0.43) 2px;
+}
+
+div.hilight-check {
+    background: rgba(255, 66, 0, 0.43);
+    border: inset rgba(56, 11, 11, 0.43) 2px;
+}

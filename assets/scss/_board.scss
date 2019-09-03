@@ -1,0 +1,186 @@
+#board {
+    position: absolute;
+    direction: ltr;
+    width: 480px;
+    height: 480px;
+    border: 2px solid black;
+    background: url(./images/board.jpg);
+    margin: 0 20px;
+}
+
+.imgs, .white-pawn, .white-bishop, div.change-white-bishop, .white-knight,
+    div.change-white-knight, .white-rook, div.change-white-rook, .white-queen,
+    div.change-white-queen, .white-king, .black-pawn, .black-bishop, div.change-black-bishop,
+    .black-knight, div.change-black-knight, .black-rook, div.change-black-rook,
+    .black-queen, div.change-black-queen, .black-king {
+    width: 56px;
+    height: 55px;
+    background: url(./images/mans.png);
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.white-pawn {
+    background-position: 0 55px;
+}
+  
+.white-bishop, div.change-white-bishop {
+    background-position: 0 110px;
+}
+  
+.white-knight, div.change-white-knight {
+    background-position: 0 165px;
+}
+
+.white-rook, div.change-white-rook {
+    background-position: 0 220px;
+}
+
+.white-queen, div.change-white-queen {
+    background-position: 0 275px;
+}
+
+.white-king {
+    background-position: 0 0;
+    margin: 420px 0 0 240px;
+}
+
+@for $i from 1 to 9 {
+    #wp-#{$i} {
+        margin: 360px 0 0 ($i - 1) * 60px;
+    }
+}
+
+#wt-19 {
+    margin: 420px 0 0 0;
+}
+  
+#wc-29 {
+    margin: 420px 0 0 60px;
+}
+
+#wf-39 {
+    margin: 420px 0 0 120px;
+}
+
+#wd-10 {
+    margin: 420px 0 0 180px;
+}
+
+#wf-40 {
+    margin: 420px 0 0 300px;
+}
+
+#wc-30 {
+    margin: 420px 0 0 360px;
+}
+
+#wt-20 {
+    margin: 420px 0 0 420px;
+}
+
+.black-pawn {
+    background-position: 56px 55px;
+}
+
+.black-bishop, div.change-black-bishop {
+    background-position: 56px 110px;
+}
+
+.black-knight, div.change-black-knight {
+    background-position: 56px 165px;
+}
+
+.black-rook, div.change-black-rook {
+    background-position: 56px 220px;
+}
+
+.black-queen, div.change-black-queen {
+    background-position: 56px 275px;
+}
+
+.black-king {
+    background-position: 56px 0;
+    margin: 0 0 0 240px;
+}
+
+@for $i from 1 to 9 {
+    #bp-#{$i} {
+        margin: 60px 0 0 ($i - 1) * 60px;
+    }
+}
+
+#bt-19 {
+    margin: 0;
+}
+
+#bc-29 {
+    margin: 0 0 0 60px;
+}
+
+#bf-39 {
+    margin: 0 0 0 120px;
+}
+
+#bd-10 {
+    margin: 0 0 0 180px;
+}
+
+
+#bf-40 {
+    margin: 0 0 0 300px;
+}
+
+#bc-30 {
+    margin: 0 0 0 360px;
+}
+
+#bt-20 {
+    margin: 0 0 0 420px;
+}
+
+#change {
+    width: 331px;
+    height: 115px;
+    position: absolute;
+    margin: 205.5px 97.5px;
+    z-index: 1051;
+    display: none;
+}
+
+#white, #black {
+    display: none;
+}
+  
+div.change-white-bishop {
+    margin: 27.5px 0 0 25.5px;
+}
+  
+div.change-white-knight {
+    margin: 27.5px 0 0 95px;
+}
+  
+div.change-white-rook {
+    margin: 27.5px 0 0 171px;
+}
+  
+div.change-white-queen {
+    margin: 27.5px 0 0 241px;
+}
+  
+div.change-black-bishop {
+    margin: 27.5px 0 0 25.5px;
+}
+  
+div.change-black-knight {
+    margin: 27.5px 0 0 95px;
+}
+
+div.change-black-rook {
+    margin: 27.5px 0 0 171px;
+}
+
+div.change-black-queen {
+    margin: 27.5px 0 0 241px;
+}
