@@ -1,6 +1,6 @@
 Chess
 =====
-![Chess](https://photos.app.goo.gl/TMZZc4eNbFqNy1Gc6)
+![Chess](http://cimethod.com/web/images/intro.png)
 
 Installation
 ------------
