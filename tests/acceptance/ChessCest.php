@@ -4,17 +4,9 @@ use yii\helpers\Url;
 
 class ChessCest
 {
-    public function _before(AcceptanceTester $I)
+    public function tryToViewChess(AcceptanceTester $I)
     {
-        $I->amOnPage(Url::toRoute('chess'));
-    }
-
-    public function _after(AcceptanceTester $I)
-    {
-    }
-
-    public function tryToTest(AcceptanceTester $I)
-    {
+        $I->amOnPage(Url::toRoute('/chess'));
         $I->see("Chess v1.0.0", "p");
     }
 }

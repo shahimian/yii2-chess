@@ -9,7 +9,7 @@ modules:
     enabled:
         - WebDriver:
             browser: chrome
-            url: 127.0.0.1:8080/
+            url: http://localhost/basic/web/
         - Yii2:
             part: orm
             entryScript: index-test.php
