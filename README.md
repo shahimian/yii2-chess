@@ -49,3 +49,5 @@ For test this extension use these commands:
 > chromedriver
 ```
 and then `codecept run`
+
+*Notice* Make sure to set config Yii2 at `codeception.yml` in root folder and set your url that you test to be exact. For this purpose, modify `acceptance.suite.yml` in test folder.
