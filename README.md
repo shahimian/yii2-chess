@@ -1,10 +1,9 @@
 Chess
 =====
-![Chess](http://cimethod.com/web/images/intro.png)
 
 Installation
 ------------
-
+<img align="left" src="http://cimethod.com/web/images/intro.png">
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
 Either run
