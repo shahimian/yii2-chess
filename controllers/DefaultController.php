@@ -4,6 +4,7 @@ namespace shahimian\chess\controllers;
 
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use shahimian\chess\models\ChessModel;
 
 /**
  * Default controller for the `chess` module
@@ -17,6 +18,13 @@ class DefaultController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionForm(){
+        $model = new ChessModel();
+        return $this->render('form', [
+            'model' => $model,
+        ]);
     }
 
 

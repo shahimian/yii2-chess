@@ -20,7 +20,22 @@ class Chess extends Widget {
     }
 
     public function view(){
-        return $this->render('index');
+        return $this->render('index', [
+            'movements' => $this->movementMan(),
+        ]);
+    }
+
+    private function movementMan(){
+        return [
+            'wp-1' => [
+                'x' => 0,
+                'y' => -50,
+            ],
+            'bp-4' => [
+                'x' => 0,
+                'y' => 100,
+            ],
+        ];
     }
 
 }
